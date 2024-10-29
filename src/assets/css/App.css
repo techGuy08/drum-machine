@@ -1,0 +1,146 @@
+body {
+  margin-top: 20vh;
+  background: #3498db;
+  color: #fff;
+}
+.drum-machine {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 5px solid #444;
+  box-shadow: 4px 8px 15px rgb(0 0 0 / 29%);
+  background: #2c3e50;
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: flex;
+}
+
+.machine-body {
+  order: 1;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.machine-header {
+  width: 40%;
+  order: 2;
+  padding-left: 30px;
+}
+div#display {
+  background: #f5efef;
+  min-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 25px;
+  user-select: none;
+}
+.drum-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  gap: 10px;
+}
+button.drum-pad {
+  font-weight: bold;
+  padding: 10px 5px;
+  font-size: 30px;
+  border-radius: 10px;
+}
+button.drum-pad.btn.active {
+  transform: scale(0.95);
+}
+
+.toggle-group {
+  margin: 20px 0;
+  font-weight: bold;
+}
+.toggle-group label {
+  background: transparent !important;
+  color: transparent;
+  border: 3px solid #fff !important;
+  margin-left: 10px;
+  border-radius: 100px;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  transition: 0.3s;
+}
+
+.toggle-group label::after {
+  content: "";
+  width: 33px;
+  height: 33px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  transition: 0.3s;
+  left: 21px;
+  transform: translate(-50%, -50%);
+}
+.toggle-group input:checked + label {
+  background: #fff !important;
+}
+.toggle-group input:checked + label::after {
+  left: calc(100% - 20px);
+  background: #3498db;
+}
+
+.volume-slide {
+  width: 95%; /* Width of the outside container */
+  margin: 20px auto;
+}
+
+/* The slider itself */
+.volume-slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 6px;
+}
+
+/* Mouse-over effects */
+.volume-slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #fff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #fff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+.footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 24vh auto 0;
+}
+
+.footer a {
+  color: #fff;
+  margin-left: 5px;
+}
