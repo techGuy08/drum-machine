@@ -5,6 +5,7 @@ import Toggle from "./Toggle";
 import "bootstrap/dist/css/bootstrap.css";
 import "../assets/css/App.css";
 
+
 function App() {
   const [isPowerOn, setIsPowerOn] = useState(true);
   const [display, setDisplay] = useState("");
@@ -24,7 +25,7 @@ function App() {
         let audioSrc = btnEl.querySelector("audio").src;
         let audioName = audioSrc
           .replace(/(^.+\/)|\..+$/g, "")
-          .replace(/_/g, " ");
+          .replace(/_|-/g, " ");
         setDisplay(audioName);
         audioEl.play().catch((err) => console.log(err));
       }
@@ -117,7 +118,7 @@ function App() {
                   key={i}
                   name={name}
                   onDrumClick={() => handleDrumClick(name)}
-                  kitSwichOn={kitSwich}
+                  isKitSwichOn={kitSwich}
                 />
               );
             })}

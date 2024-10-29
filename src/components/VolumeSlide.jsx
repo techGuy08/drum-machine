@@ -1,4 +1,5 @@
 const VolumeSlide = ({ onVolumeChange, value }) => {
+    
   return (
     <div class="volume-slide">
       <input

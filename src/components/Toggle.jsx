@@ -1,4 +1,5 @@
 const Toggle = ({ checked, onChange, id,text }) => {
+  
   return (
     <div className="toggle-group">
       {text}

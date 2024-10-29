@@ -64,7 +64,7 @@ export const DrumBtnArr = [
   },
 ];
 
-const DrumBtn = ({ name, onDrumClick }) => {
+const DrumBtn = ({ name, onDrumClick, isKitSwichOn }) => {
   let index = DrumBtnArr.findIndex((el) => el.name === name);
   let audioUrls = DrumBtnArr[index].audioUrls;
   return (
@@ -74,7 +74,11 @@ const DrumBtn = ({ name, onDrumClick }) => {
       onClick={onDrumClick}
     >
       {name}
-      <audio src={audioUrls[0]} className="clip" id={name}></audio>
+      <audio
+        src={audioUrls[isKitSwichOn ? 1 : 0]}
+        className="clip"
+        id={name}
+      ></audio>
     </button>
   );
 };
