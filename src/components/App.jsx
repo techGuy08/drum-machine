@@ -9,7 +9,7 @@ import "../assets/css/App.css";
 function App() {
   const [isPowerOn, setIsPowerOn] = useState(true);
   const [display, setDisplay] = useState("");
-  const [volume, setVolume] = useState(0);
+  const [volume, setVolume] = useState(50);
   const [kitSwich, setKitSwitch] = useState(false);
 
   const handleDrumClick = (name) => {
