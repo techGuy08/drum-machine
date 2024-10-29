@@ -1,6 +1,6 @@
 # Drum Machine
 
-![Design preview for the drum machine app coding challenge](./src/assets/preview.JPG)
+![Design preview for the drum machine app coding challenge](./src/assets/images/preview.JPG)
 
 live demo: https://techguy08.github.io/drum-machine/
 
